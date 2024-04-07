@@ -1,0 +1,32 @@
+% First input frequency
+f1 = 100e6; % 100 MHz
+% Second input frequency
+f2 = 150e6; % 150 MHz
+% Frequency of the mixer output
+fIF = 50e6; % 50 MHz IF frequency
+% Input amplitudes
+A1 = 1; % Input 1
+A2 = 0.5; % Input 2
+% Generate input signals
+t = 0:0.00000001:0.00001; % Time
+x1 = A1 * cos(2*pi*f1*t); % Input signal 1
+x2 = A2 * cos(2*pi*f2*t); % Input signal 2
+% Mix the signals
+x_mix = x1 .* x2; % Mixer output
+% Plot the signals
+figure;
+subplot(3,1,1);
+plot(t, x1);
+xlabel('Time (s)');
+ylabel('Input 1');
+title('Input Signal 1');
+subplot(3,1,2);
+plot(t, x2);
+xlabel('Time (s)');
+ylabel('Input 2');
+title('Input Signal 2');
+subplot(3,1,3);
+plot(t, x_mix);
+xlabel('Time (s)');
+ylabel('Output');
+title('Mixer Output');
