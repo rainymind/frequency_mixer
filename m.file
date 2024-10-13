@@ -1,4 +1,5 @@
-% First input frequency000000000000000
+% 000000000000000
+% First input frequency
 f1 = 100e6; % 100 MHz
 % Second input frequency
 f2 = 150e6; % 150 MHz
